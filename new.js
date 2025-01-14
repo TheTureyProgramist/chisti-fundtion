@@ -23,10 +23,10 @@ function getEmal(users, email) {
 }
 console.log("eмail:", getEmal(users, "theturkeyprogramist12@gmail.com"));
 
-function getRange(users, min, max) {
-  return users.filter(user => user.age >= min || user.age <= max);
+function getAge(users, min, max) {
+  return users.filter(user => min < user.age < max );
 }
-console.log("Діапазон 10-30 років", getRange(users, 10, 30));
+console.log("Діапазон 10-30 років", getAge(users, 10, 30));
 
 function getGender(users, gender) {
   return users.filter(user => user.gender === gender);
